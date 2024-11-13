@@ -1,38 +1,133 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* App Container */
 .App {
+  width: 90%;
+  max-width: 900px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-top: 5px solid #00796b;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Espacio adicional entre los campos */
+  margin-bottom: 30px;
+}
+
+.contact-form input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #e0f2f1;
+  margin-top: 5px; /* Espacio superior */
+  margin-bottom: 15px; /* Espacio inferior */
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus {
+  border-color: #00796b;
+}
+
+.contact-form button {
+  grid-column: span 2;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #00796b;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #004d40;
+}
+
+.contact-form button:last-child {
+  background-color: #d32f2f;
+}
+
+.contact-form button:last-child:hover {
+  background-color: #b71c1c;
+}
+
+/* Contact List */
+.contact-list {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-list h2 {
+  color: #00796b;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Contact Card */
+.contact-card {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #00796b;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.contact-card p {
+  margin: 5px 0;
+  color: #004d40;
+}
+
+.contact-card button {
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-card button:first-of-type {
+  background-color: #4caf50;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-card button:first-of-type:hover {
+  background-color: #388e3c;
+}
+
+.contact-card button:last-of-type {
+  background-color: #d32f2f;
+}
+
+.contact-card button:last-of-type:hover {
+  background-color: #b71c1c;
 }
